@@ -1,2 +1,2 @@
-# jamm.github.io
+# jamm docs
 Docs of jamovi Advanced Mediation Models
