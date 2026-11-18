@@ -397,6 +397,26 @@ Twisk, Chinapaw, de Boer, Heymans, 2017</a>) The purpose of the
 individual regressions tables is to allow exact comparison with results
 obtained in R (or other software) using the Baron and Kenny
 approach.</p>
+<div id="missing-data" class="section level1">
+<h1>Missing data in jAMM 2</h1>
+<p>jAMM 2 uses complete-case analysis (listwise deletion). A case is
+excluded if it has a missing value in any variable selected for the
+analysis. The mediation model, conditional effects, and optional
+individual regression tables use the same complete-case dataset.
+The number of observations used is reported in the output.</p>
+<p>Full information maximum likelihood (FIML) is not supported in jAMM 2.
+Although the path model is estimated by maximum likelihood, this does
+not mean that missing values are handled by FIML. Complete-case analysis
+is the missing-data policy supported by this module; it does not by
+itself correct potential bias due to missing data.</p>
+<p>Earlier versions of jAMM offered a FIML option. When rerunning an
+analysis created with that option in jAMM 2, do not assume that its
+previous missing-data handling is retained: jAMM 2 excludes incomplete
+cases. Check the reported sample size and results, which may differ
+from the earlier analysis. R scripts using the former
+<code>missing = "ml"</code> argument must be updated because that
+argument is no longer accepted.</p>
+</div>
 <div id="list-of-docs" class="section level1">
 <h1>List of docs</h1>
 <ul>
